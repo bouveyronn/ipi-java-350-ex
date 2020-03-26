@@ -2,6 +2,7 @@ package com.ipiecoles.java.java350.model;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
 
 import java.time.LocalDate;
 
@@ -49,10 +50,6 @@ public class EmployeTest {
     @Test
     public void TestMethodeDateIsNull(){
         //Given
-        String date = "1990-08-16";
-
-        //default, ISO__LOCAL__DATE
-        LocalDate localDate = LocalDate.parse(date);
         Employe employe = new Employe("BERNARD", "Mathis", "M666MB", null, 2500.0, 1, 1.0);
         //When
         //Then
@@ -70,6 +67,11 @@ public class EmployeTest {
 
         //Then
         Assertions.assertEquals(0,nbAnnees);
+    }
+
+    @Test
+    public void testGetPrimeAnciennete(){
+
     }
 
 
